@@ -1,0 +1,94 @@
+
+nav{
+    display: block;
+    float: right;
+    top: 0%;
+    right: 0px;
+    width: fit-content;
+    height: 50px;
+position: relative;
+padding: 10px;
+padding-top: 10px;
+}
+
+img{
+    opacity: 0.3;
+    display: block;
+    float: left;
+}
+
+body{
+    background:url(thor-love-thunder-avengers-5.jpeg);
+    background-size:cover;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+a{
+    color: #ffffff;
+    font-family: 'Noto Serif', serif;
+    text-decoration: wavy;
+}
+
+div{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5em;
+    color: aliceblue;
+    text-shadow: 2px 2px black;
+}
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+    color: aliceblue;
+    text-shadow:2px 2px black;
+}
+section{
+    padding-top:500px;
+}
+div#container{
+    border-bottom: #1b1b1b 3px outset;
+    background-color: #1b1b1b;
+    height: 100px;
+
+}
+@media (min-width:480px) {
+    div#container{
+        background-color: yellow;
+    }
+    h1{
+        font-size: 35px;
+    }
+    a{
+        color:black
+    }}
+    
+@media (min-width:800px) {
+    div#container{
+        background-color: lightgreen;
+    }
+    h1{
+        font-size: 25px;
+    }
+    a{
+        color:black
+    }}
+    
+@media (min-width:992px) {
+    div#container{
+        background-color: red;
+    }
+    h1{
+        font-size: 35px;
+    }
+    a{
+        color:white
+    }}
+    
+@media (min-width:1200px) {
+    div#container{
+        background-color: black;
+    }
+    a{
+          color:white
+    }}
+   

@@ -1,0 +1,37 @@
+header{
+border-bottom:2px solid grey;
+}
+#list{
+    text-decoration: underline;
+}
+
+span{
+    background-color: yellow;
+}
+#title{
+    text-align: center;
+}
+h2#style{
+    border-bottom: 2px solid gray;
+}
+img {display: block;
+    margin: auto;
+}
+th#head{
+    color: red;
+    border: 2px outset red;
+    padding-left: 50px;
+}
+td,th{
+    color: black;
+    border: 2px outset black;
+    padding-left: 50px;
+}
+div{
+display: block;
+margin: auto;
+}
+tr#blank{
+    border: 2px;
+    opacity:0;
+}

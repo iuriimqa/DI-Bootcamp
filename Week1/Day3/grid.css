@@ -1,0 +1,38 @@
+
+.grid-container{
+    border:2px solid black;
+    display: grid;
+    grid-template-columns:1fr 3fr;
+    grid-template-rows:200px 200px 200px 200px;
+    background-color: azure;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+div{
+    border: 2px solid black;
+    margin: 10px;
+}
+.box1{
+background-color: rgb(245, 42, 42);
+}
+.box2{
+    background-color: lightblue;
+}
+.box3{
+    background-color: rgb(245, 42, 42);
+}
+.box4{
+    background-color: lightblue;
+}
+.box5{
+    background-color: rgb(245, 42, 42);
+}
+.box6{
+    background-color:lightblue;
+}
+.box7{
+    grid-area: 4/1/5/3;
+    background-color: yellow;
+}
