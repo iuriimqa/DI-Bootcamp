@@ -8,41 +8,33 @@
     <title>Document</title>
 </head>
 <body>
- <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Other</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
- </nav>
+    <div class="alert alert-primary col-3" role="alert">A first alert</div>
+    <div class="alert alert-success col-2" role="alert">A second alert</div>
+    <div class="alert alert-danger col-3 float-xxl-start" role="alert">A third alert</div>
+
+        <button type="button" class="btn btn-primary col-6">1</button>
+        <button type="button" class="btn btn-success col-3">2</button>
+        <button type="button" class="btn btn-danger col-2">3</button>
+
+        <form>
+            <div class="mb-3 col-3">
+              <label for="exampleInputName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3 col-3">
+              <label for="exampleInputSurname" class="form-label">Surname</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3 col-3">
+              <label for="exampleInputNumber" class="form-label">Phone</label>
+              <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3 col-3">
+              <label for="exampleInputEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            </div>
+            <button type="submit"class="btn btn-primary"><i class="fa-solid fa-chart-line-up">Submit</i></button>
+          </form>
 </body>
 </html>
