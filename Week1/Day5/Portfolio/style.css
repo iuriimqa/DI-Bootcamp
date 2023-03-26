@@ -1,0 +1,60 @@
+
+.myclass {
+    color:red;
+}
+
+.collapse navbar-collapse ju{
+    float: left;
+}
+
+.num1{
+        position: relative;
+        min-height: 100vh;
+        min-width: 100vw;
+        left: 0;
+        top: 0;
+        background: rgba(244, 244, 244,0.3);
+    background-image:url(IMG_3414.jpeg);
+    background-size: cover;
+}
+
+img{
+    border-radius: 50%;
+    border: 2px;
+    overflow:hidden;
+}
+h1,h4,h3,p{
+    font-family:Raleway;
+    text-shadow: 1px 1px orange;
+}
+span{
+    font-family:fantasy;
+    text-decoration: underline;
+}
+a{
+    font-family: Raleway;
+    color: black;
+    text-decoration: wavy;
+}
+
+.about,.projects{
+    text-align: center;
+}
+
+.portfolio, article {
+    margin: 5em 0;
+    position: relative;
+}
+a:hover{
+    transform: scale(1.2);
+    background-color:gold;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:rgba(250, 234, 52);
+    border:1px outset orange;
+    color: black;
+  }
