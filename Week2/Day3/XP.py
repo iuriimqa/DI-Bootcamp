@@ -76,49 +76,51 @@
 #     "type_of_clothes": ["men", "women", "children", "home"],
 #     "international_competitors": ["Gap", "H&M", "Benetton"],
 #     "number_stores": 7000,
-#     "major_color": [
-#         {"France": "blue"},
-#         {"Spain": "red"},
-#         {"US": ["pink", "green"]}]}
-# Change the number of stores to 2.
+#     "major_color": {
+#         "France": "blue",
+#         "Spain": "red",
+#         "US": ["pink", "green"]
+#     },
+# }
+# # Change the number of stores to 2.
 # brand["number_stores"] = 2
-# Print a sentence that explains who Zaras clients are.
+# # Print a sentence that explains who Zaras clients are.
 # print("Zara's clients are: ",brand["type_of_clothes"])
-# Add a key called country_creation with a value of Spain.
-
+# # Add a key called country_creation with a value of Spain.
+#
 # brand["country_creation"] = "Spain"
-
-# Check if the key international_competitors is in the dictionary. If it is, add the store Desigual.
+#
+# # Check if the key international_competitors is in the dictionary. If it is, add the store Desigual.
 # if "international_competitors" in brand:
 #     print("Yes")
 # else:
-    # print("No")
-
+#     print("No")
+#
 # brand["name"] = "Desigual","Zara"
-# Delete the information about the date of creation.
+# # Delete the information about the date of creation.
 # brand.pop("creation_date")
-# Print the last international competitor.
+# # Print the last international competitor.
 # print(brand["international_competitors"][-1])
-# Print the major clothes colors in the US.
-# print(brand["major_color"],['US'])
-# Print the amount of key value pairs (ie. length of the dictionary).
-# print(len(brand))
-# Print the keys of the dictionary.
+# # Print the major clothes colors in the US.
+# print(brand["major_color"]['US'])
+# # Print the amount of key value pairs (ie. length of the dictionary).
+# print(len/(brand))
+# # Print the keys of the dictionary.
 # print(brand.keys())
-
-# Create another dictionary called more_on_zara with the following details:
 #
-# creation_date: 1975
-# number_stores: 10 000
-
+# # Create another dictionary called more_on_zara with the following details:
+# #
+# # creation_date: 1975
+# # number_stores: 10 000
+#
 # more_on_zara = {'creation_date':1975, 'number_stores':10000}
-
-# Use a method to add the information from the dictionary more_on_zara to the dictionary brand
-
-# brand.update(more_on_zara)
-# Print the value of the key number_stores. What just happened
-# print(brand["number_stores"])
 #
+# # Use a method to add the information from the dictionary more_on_zara to the dictionary brand
+#
+# brand.update(more_on_zara)
+# # Print the value of the key number_stores. What just happened
+# print(brand["number_stores"])
+# #
 # Exercise4
 users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
 numbers = [0, 1, 2, 3, 4]
@@ -130,5 +132,4 @@ print(users_dict2)
 users.sort()
 users_dict3 = list(zip(users, numbers))
 print(users_dict3)
-users.sort('i')
-print(users)
+
