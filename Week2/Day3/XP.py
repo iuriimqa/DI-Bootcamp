@@ -6,7 +6,7 @@
 
 # keys = ['Ten','Twenty','Thirty']
 # values = [10, 20, 30]
-# sample_dict = list(zip(keys, values))
+# sample_dict = dict(zip(keys, values))
 # print(sample_dict)
 
 # Exercise2
@@ -124,12 +124,22 @@
 # Exercise4
 users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
 numbers = [0, 1, 2, 3, 4]
-users_dict = list(zip(users, numbers))
+users_dict = dict(zip(users, numbers))
+print(users_dict)
 print(users_dict)
 
-users_dict2 = list(zip(numbers, users))
+users_dict2 = dict(zip(numbers, users))
 print(users_dict2)
 users.sort()
-users_dict3 = list(zip(users, numbers))
+users_dict3 = dict(zip(users, numbers))
 print(users_dict3)
+
+
+user_dictc = {key: value for (key, value) in users_dict.items() if key.startswith('M') or key.startswith('P')}
+print(user_dictc)
+
+user_dict5 = {key: value for (key, value) in users_dict.items() if key.startswith('i')}
+print(user_dict5)
+
+
 
