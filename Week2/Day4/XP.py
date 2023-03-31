@@ -106,29 +106,47 @@
 # Bonus: Give the temperature as a floating-point number instead of an integer.
 # Bonus: Instead of asking for the season, ask the user for the number of the month (1 = January, 12 = December). Determine the season according to the month.
 
-from random import randint
-def get_random_temp(seasion:str) -> int:
-    a = randint(-10,40)
-    print(kwargs)
-    print(a)
-    return a
-get_random_temp()
-
-def main() -> str:
-    b = get_random_temp()
-    if b<0:
-      print("The temperature right now is:", b,"Celsium. ","Brrr, that’s freezing! Wear some extra layers today")
-    if 0<b<16:
-      print("The temperature right now is:", b, "Celsium. ","Quite chilly! Don’t forget your coat")
-    if 16<b<23:
-      print("The temperature right now is:", b, "Celsium. ", "Nice, Spring's weather")
-    if 24<b<32:
-      print("The temperature right now is:", b, "Celsium. ", "Wow!It's hot, be carefully")
-    if 32<b<40:
-      print("The temperature right now is:", b, "Celsium. ", "Exremely hot, I think better to stay home today")
-
-    return b
-main()
+# from random import randint
+# def get_random_temp() -> int:
+#     a = randint(-10,40)
+#     print(a)
+#     return a
+# get_random_temp()
+# def main() -> str:
+#     b = get_random_temp()
+#     if b<0:
+#       print("The temperature right now is:", b,"Celsium. ","Brrr, that’s freezing! Wear some extra layers today")
+#     if 0<b<16:
+#       print("The temperature right now is:", b, "Celsium. ","Quite chilly! Don’t forget your coat")
+#     if 16<b<23:
+#       print("The temperature right now is:", b, "Celsium. ", "Nice, Spring's weather")
+#     if 24<b<32:
+#       print("The temperature right now is:", b, "Celsium. ", "Wow!It's hot, be careful")
+#     if 32<b<40:
+#       print("The temperature right now is:", b, "Celsium. ", "Extremely hot, I think better to stay home today")
+#
+#     return b
+# main()
 
 
+#2
+# from random import randint
+# def get_random_temp() -> int:
+#     season =input("Input season ?")
+#     if season == 'spring':
+#         top = 15
+#         down = 5
+#     if season == 'summer':
+#         top = 35
+#         down = 16
+#     if season == 'autumn':
+#         top = 4
+#         down = -5
+#     if season == 'winter':
+#         top = -5
+#         down = -20
+#     a = randint(down,top)
+#     print(a)
+#     return a
+# get_random_temp()
 
