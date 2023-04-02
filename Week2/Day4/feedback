@@ -1,0 +1,9 @@
+hi yuri, i checked your daily challenge and it doesnt give the right result,
+the output should be a simple This is Matrix message in the terminal.
+
+1. The matrix_list variable is currently a list of characters, but it should be a list of lists representing the matrix. You can create this nested list by splitting the matrix string into separate rows and then converting each row to a list of characters.
+2. One way to create the nested list is to use a loop that goes through each row in the matrix string, splits it into a list of characters using the list() function, and then appends the resulting list to a new list representing the matrix.
+3. Once you have the nested list, you can extract the columns using a list comprehension as you have already done in your code.
+4. Finally, you can process each column to extract the secret message using the proc_column() function, as you have already done in your code.
+
+let me know if you have any questions
