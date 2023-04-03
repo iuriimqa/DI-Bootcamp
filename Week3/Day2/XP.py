@@ -80,37 +80,37 @@
 # #
 # # Create 3 dogs and run them through your class.
 #
-# class Dog:
-#     def __init__(self, name, age, weight):
-#         self.name = name
-#         self.age = age
-#         self.weight = weight
-#
-#     def bark(self):
-#         barking = print(f'{self.name,"is barking"}')
-#         return barking
-#
-#     def run_speed(self):
-#         speed = (self.weight/self.age*10)
-#         return speed
-#     def fight(self, other_dog):
-#         if self.run_speed()*self.weight > other_dog.run_speed()*other_dog.weight:
-#             winner = print(f'{"The winner is ",self.name}')
-#         else:
-#             winner = print(f'{"The winner is ",other_dog.name}')
-#         return winner
-#
-# dog1 = Dog('Puppy',5,20)
-# dog2 = Dog('Max',7,30)
-# dog3 = Dog('Bob', 8,50)
-#
-# dog1.bark()
-# dog2.bark()
-# dog3.bark()
-#
-# dog1.run_speed()
-# dog2.run_speed()
-# dog3.run_speed()
-#
-# dog2.fight(dog3)
-#
+class Dog:
+    def __init__(self, name, age, weight):
+        self.name = name
+        self.age = age
+        self.weight = weight
+
+    def bark(self):
+        barking = print(f'{self.name,"is barking"}')
+        return barking
+
+    def run_speed(self):
+        speed = (self.weight/self.age*10)
+        return speed
+    def fight(self, other_dog):
+        if self.run_speed()*self.weight > other_dog.run_speed()*other_dog.weight:
+            winner = print(f'{"The winner is ",self.name}')
+        else:
+            winner = print(f'{"The winner is ",other_dog.name}')
+        return winner
+
+dog1 = Dog('Puppy',5,20)
+dog2 = Dog('Max',7,30)
+dog3 = Dog('Bob', 8,50)
+
+dog1.bark()
+dog2.bark()
+dog3.bark()
+
+dog1.run_speed()
+dog2.run_speed()
+dog3.run_speed()
+
+dog2.fight(dog3)
+
