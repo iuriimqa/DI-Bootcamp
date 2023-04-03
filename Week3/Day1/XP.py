@@ -116,59 +116,59 @@
 # #
 # # Create an object called ramat_gan_safari and call all the methods.
 # # Tip: The zookeeper is the one who will use this class.
-# class Zoo:
+class Zoo:
+
+    # In this class create a method __init__ that takes one parameter: zoo_name.It instantiates two attributes: animals(an empty list) and name(name of the zoo).
+    def __init__(self, zoo_name):
+        self.animals = []
+        self.name = zoo_name
+
+    def add_animal(self):
+         new_animal = input('Type animal to add ')
+         self.animals.append(new_animal)
+
+    def get_animals(self):
+          print(self.animals)
+
+    def sell_animal(self):
+         animal_sold = input('What animal you want to remove? ')
+         self.animals.remove(animal_sold)
+         print(self.animals)
+
+    def sort_animals(self):
+        animals = sorted(self.animals)
+        zoo_list = []
+        zoo_list.append([animals[0]])
+        for i in range(1,len(animals)):
+            if animals[i][0] != animals[i-1][0]:
+                zoo_list.append([])
+            zoo_list[-1].append(animals[i])
+        zoo_list = enumerate(zoo_list)
+        for i in zoo_list:
+            print((f'{i[0]+1}:{i[1]}'))
+
+
+        print(list(zoo_list))
+
+    def ramatgan_safari(self):
+        zoo.add_animal()
+        zoo.add_animal()
+        zoo.add_animal()
+        zoo.add_animal()
+        zoo.sell_animal()
+        zoo.sort_animals()
+
+
+zoo = Zoo('Ramat-gan')
+
+# zoo.add_animal()
+# zoo.add_animal()
+# zoo.add_animal()
 #
-#     # In this class create a method __init__ that takes one parameter: zoo_name.It instantiates two attributes: animals(an empty list) and name(name of the zoo).
-#     def __init__(self, zoo_name):
-#         self.animals = []
-#         self.name = zoo_name
 #
-#     def add_animal(self):
-#          new_animal = input('Type animal to add ')
-#          self.animals.append(new_animal)
-#
-#     def get_animals(self):
-#           print(self.animals)
-#
-#     def sell_animal(self):
-#          animal_sold = input('What animal you want to remove? ')
-#          self.animals.remove(animal_sold)
-#          print(self.animals)
-#
-#     def sort_animals(self):
-#         animals = sorted(self.animals)
-#         zoo_list = []
-#         zoo_list.append([animals[0]])
-#         for i in range(1,len(animals)):
-#             if animals[i][0] != animals[i-1][0]:
-#                 zoo_list.append([])
-#             zoo_list[-1].append(animals[i])
-#         zoo_list = enumerate(zoo_list)
-#         for i in zoo_list:
-#             print((f'{i[0]+1}:{i[1]}'))
-#
-#
-#         print(list(zoo_list))
-#
-#     def ramatgan_safari(self):
-#         zoo.add_animal()
-#         zoo.add_animal()
-#         zoo.add_animal()
-#         zoo.add_animal()
-#         zoo.sell_animal()
-#         zoo.sort_animals()
-#
-#
-# zoo = Zoo('Ramat-gan')
-#
-# # zoo.add_animal()
-# # zoo.add_animal()
-# # zoo.add_animal()
-# #
-# #
-# # zoo.sort_animals()
-#
-# zoo.ramatgan_safari()
+# zoo.sort_animals()
+
+zoo.ramatgan_safari()
 
 
 
