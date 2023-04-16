@@ -1,0 +1,3 @@
+-- select count(first_name) from actors;
+-- INSERT INTO actors (first_name, last_name, age, number_oscars)
+-- VALUES('','Demon','08/10/1000', '0');
