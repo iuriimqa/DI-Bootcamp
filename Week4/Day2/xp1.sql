@@ -1,0 +1,4 @@
+-- select * from item order by price;
+-- select * from item where price>=80 order by price desc;
+-- select first_name,last_name from customers order by first_name;
+-- select last_name from customers order by last_name desc;
