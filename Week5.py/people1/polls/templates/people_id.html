@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PeopleId</title>
+</head>
+<body>
+    <h1>
+      Person № {{id}} :
+    </h1>
+    <h3>
+        <br>
+        {% for person in peoples %}
+            {% if person.id == id %}
+                <p>Name: {{ person.name }}, Age: {{ person.age }}, Country: {{ person.country }}</p>
+            {% endif %}
+        {% endfor %}
+        <br>
+    </h3>
+
+</body>
+</html>

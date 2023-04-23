@@ -1,5 +1,5 @@
 """
-URL configuration for people1 project.
+URL configuration for day2xp project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -15,12 +15,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from polls.views import index
-from polls.views import people_Id
+from django.urls import path
+from polls.views import families, animals, animallist
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('people/', include('polls.urls')),
-    path('people_id/',people_Id)
+    path('animals/<int:id>',animals),
+    path('animals/<int:id>',animals,name = 'animalspec'),
+    path('animallist/',animallist,name='generallist'),
+    path('families/<int:id>',families),
 ]
+

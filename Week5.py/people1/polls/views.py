@@ -15,16 +15,13 @@ def index(request):
     context = {'result': people_age}
     return render(request, 'index.html', context)
 
-def people_Id(request):
-    json_file = "polls/people.json"
-    with open(json_file, 'r') as file:
-        people = json.load(file)
-        people_id = people['people']
+def people_Id(request,id:int):
 
+    peoples = people['people']
 
-        context = {
+    context = {
             'id': id,
-            'people_id': people_id,
-            'people_1':people_id[0]
+            'peoples': peoples
         }
-        return render(request, 'people_id.html', context)
+    return render(request, 'people_id.html', context)
+
