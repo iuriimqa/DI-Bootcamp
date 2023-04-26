@@ -16,7 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib import admin
+from django.urls import path
+from gifs.views import add_gif_view, categories, add_category, gif_view,category_view,homepage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('add_gif/',add_gif_view),
+    path('categories/',categories),
+    path('addcategory/',add_category),
+    path('allgifs/<int:id>',gif_view),
+    path('categoryview/<int:cat_id>',category_view),
+    path('home/',homepage),
+
 ]

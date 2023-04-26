@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Categories</title>
+</head>
+<body>
+    <ol>
+        {% for cat in all_categories %}
+        <li>{{ cat.name }} <a href="../categoryview/{{cat.id}}"></a><br>
+        </li>
+        {% endfor %}
+    </ol>
+
+</body>
+</html>
