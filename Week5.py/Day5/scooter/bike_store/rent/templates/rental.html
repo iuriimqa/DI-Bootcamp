@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rentals</title>
+</head>
+<body>
+    <h1>
+        All Rentals
+    </h1>
+       <ol type="1">
+            {% for r in rentals %}
+                <br>
+                <li><a href="/rentals/{{r.id}}">{{r}}</a></li>
+                <br>
+            {% endfor %}
+        </ol>
+
+</body>
+</html>

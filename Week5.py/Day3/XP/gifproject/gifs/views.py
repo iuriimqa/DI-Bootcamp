@@ -64,6 +64,7 @@ def gif_view(request, id):
 
     return render(request,'gifview.html',context)
 
+
 def categories(request):
     allcategory = Category.objects.all()
     context = {
