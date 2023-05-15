@@ -4,13 +4,16 @@ from faker import Faker
 
 # Create your models here.
 class Customer(models.Model):
-    first_name = models.CharField(50)
-    last_name = models.CharField(50)
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
     email = models.EmailField()
     phone_number = models.CharField(max_length=50)
-    address = models.CharField(50)
-    city = models.CharField(20)
-    country = models.CharField(20)
+    address = models.CharField(max_length=50)
+    city = models.CharField(max_length=20)
+    country = models.CharField(max_length=20)
+
+    def __str__(self):
+        return f"{self.first_name} | {self.email} | {self.phone_number} | {self.country}"
 
     # def __str__(self):
     # return f"{self.first_name}"

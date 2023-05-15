@@ -3,6 +3,7 @@ from .models import *
 from django.views import generic
 from .forms import AddFilmForm
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin,PermissionRequiredMixin
 
 class AddFilm(generic.CreateView):
     template_name = 'film/addfilm.html'

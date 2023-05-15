@@ -5,6 +5,15 @@
     <title>Title</title>
 </head>
 <body>
+    <h1>Add Customer</h1>
+    <form method="post">
+            <table>
+                {%csrf_token%}
+                {{form}}
+            </table>
+
+            <button class="btn-success" type="submit">Add</button>
+        </form>
 
 </body>
 </html>

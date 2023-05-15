@@ -20,8 +20,13 @@ from rent.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('rentals/',Rentals.as_view()),
-    path('vehicles/',Vehicles.as_view()),
+    path('rentals/',Rentals.as_view(),name = 'rentals'),
+    path('vehicles/',Vehicles.as_view(),name = 'vehicles'),
     path('vehicles/<int:pk>',Vehicle_id.as_view()),
     path('rentals/<int:pk>',Rental_id.as_view()),
+    path('rentals/add',RentalAdd.as_view()),
+    path('vehicles/add',VehicleAdd.as_view()),
+    path('customers/',Customers.as_view(), name = 'customers'),
+    path('customers/<int:pk>',Customer_id.as_view()),
+    path('customers/add',CustomerAdd.as_view())
 ]

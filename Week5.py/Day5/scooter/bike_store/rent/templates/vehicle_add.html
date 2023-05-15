@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Vehicle</title>
 </head>
 <body>
+    <h1>Add Vehicle</h1>
+    <form method="post">
+            <table>
+                {%csrf_token%}
+                {{form}}
+            </table>
+
+            <button class="btn-success" type="submit">Add</button>
+        </form>
 
 </body>
 </html>

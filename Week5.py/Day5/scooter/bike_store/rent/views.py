@@ -5,6 +5,7 @@ from datetime import date
 from django.db.models import F
 from faker import Faker
 from django.views import generic
+from django.urls import reverse_lazy
 
 
 class Rentals(generic.ListView):
@@ -34,6 +35,14 @@ class Vehicle_id(generic.DetailView):
     context_object_name = 'vehicle_id'
     model = Vehicle
 
+class VehicleAdd(generic.CreateView):
+    template_name = 'vehicle_add.html'
+    context_object_name = 'addvehicle'
+    model = Vehicle
+    fields = '__all__'
+    success_url = reverse_lazy('vehicles')
+
+
 class Rentals(generic.ListView):
     template_name = 'rental.html'
     context_object_name = 'rentals'
@@ -43,3 +52,31 @@ class Rental_id(generic.DetailView):
     template_name = 'rental_id.html'
     context_object_name = 'rental_id'
     model = Rental
+
+class RentalAdd(generic.CreateView):
+    template_name = 'rental_add.html'
+    context_object_name = 'addrental'
+    model = Rental
+    fields = '__all__'
+    success_url = reverse_lazy('rentals')
+
+class Customers(generic.ListView):
+    template_name = 'customers.html'
+    context_object_name = 'customers'
+    model = Customer
+
+
+class Customer_id(generic.DetailView):
+    template_name = 'customer_id.html'
+    context_object_name = 'customer_id'
+    model = Customer
+
+class CustomerAdd(generic.CreateView):
+    template_name = 'customer_add.html'
+    context_object_name = 'addcustomer'
+    model = Customer
+    fields = '__all__'
+    success_url = reverse_lazy('rentals')
+
+
+

@@ -30,7 +30,7 @@ class Comment(models.Model):
 
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     author = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null= True)
-    created_at =models.DateTimeFiels(auto_now_add=True
+    created_at =models.DateTimeField(auto_now_add=True)
     content = models.TextField()
 
     def __str__(self):
