@@ -26,6 +26,10 @@ class AddDirector(generic.CreateView):
     fields = '__all__'
     success_url = reverse_lazy("adddirector")
 
+class DeleteFilm(generic.DeleteView):
+    model = Film
+    success_url = reverse_lazy('homepage')
+
 
 
 
