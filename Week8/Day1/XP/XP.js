@@ -125,3 +125,23 @@ console.log(arr)
 arr.sort();
 res = arr.join('')
 console.log(res)
+
+
+/*Daily Stars*/
+for(i = 1;i <= 6; i++){
+    let stars = '';
+    for (let j = 1; j <= i; j++) {
+        stars += '*';
+      }
+      console.log(stars);
+    }
+/*Daily Not Word*/
+ let sentense = "the movie is not so terrible bad , i like it"
+ const indexNot = sentense.indexOf("not")
+ const indexBad = sentense.indexOf("bad") + 3
+ const replacement = "good"
+
+ if (sentense.includes("not") && sentense.includes("bad")){
+    let replaced = sentense.slice(0, indexNot) + replacement + sentense.slice(indexBad + 1);
+console.log(replaced)}
+
