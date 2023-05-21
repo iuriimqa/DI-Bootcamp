@@ -133,3 +133,47 @@
 //   }
   
 //   totalVacationCost();
+
+// /*Exercise6*/
+// var element = document.getElementById("navBar")
+// element.setAttribute("id","socialNetworkNavigation")
+// console.log(element)
+
+// var li = document.createElement("li");
+
+// // Create a new text node with “Logout” as its specified text
+// var textNode = document.createTextNode("Logout");
+
+// // Append the text node to the newly created list node (<li>)
+// li.appendChild(textNode);
+
+// // Finally, create the unordered list (<ul>) and append this updated list node to it, using the appendChild method
+// var ul = document.getElementById("list");
+// ul.appendChild(li)
+// console.log(ul)
+
+// // Get the first and last child elements of the ul element
+//   var firstLi = ul.firstElementChild;
+//   var lastLi = ul.lastElementChild;
+
+//   // Get the text content of the first and last child elements
+//   var firstLiText = firstLi.textContent;
+//   var lastLiText = lastLi.textContent;
+
+//   // Display the text content of the first and last child elements
+//   console.log("First list item: " + firstLiText);
+//   console.log("Last list item: " + lastLiText);
+/*Exercise5*/
+
+var divs = document.querySelector("#container");
+console.log(divs);
+
+var MyUl = divs.firstElementChild
+console.log(MyUl);
+var pete = MyUl.lastChild;
+pete.textContent = "Richard";
+console.log(pete);
+
+/*Exercise7*/
+
+
