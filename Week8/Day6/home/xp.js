@@ -77,7 +77,7 @@ console.log(passed)
 const congrat = students
   .filter(student => student.isPassed === true)
   .forEach(student => {
-    console.log(`Congratulations, ${student.name}!`);
+    console.log(`Congratulations, ${student.name}, you passed ${student.course}!`);
   });
 
 console.log(congrat);
