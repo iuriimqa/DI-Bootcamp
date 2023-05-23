@@ -13,4 +13,4 @@ function myMove() {
     }, 1);
 }
 
-button.addEventListener('click',myMove)
+// button.addEventListener('click',myMove)
