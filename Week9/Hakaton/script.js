@@ -54,4 +54,3 @@ async function fetchWeather(cityx,date){
 }
 
 
-// fetchWeather(cityx,date)
