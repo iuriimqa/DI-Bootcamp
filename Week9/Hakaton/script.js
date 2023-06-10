@@ -53,4 +53,20 @@ async function fetchWeather(cityx,date){
     }
 }
 
+// const url = 'https://trueway-places.p.rapidapi.com/FindPlacesNearby?location=37.783366%2C-122.402325&type=cafe&radius=180&language=en';
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '3e82f3daa4msh07fb2817f74ed19p17eed7jsn88a019a32451',
+// 		'X-RapidAPI-Host': 'trueway-places.p.rapidapi.com'
+// 	}
+// };
+
+// try {
+// 	const response = await fetch(url, options);
+// 	const result = await response.text();
+// 	console.log(result);
+// } catch (error) {
+// 	console.error(error);
+// }
 
