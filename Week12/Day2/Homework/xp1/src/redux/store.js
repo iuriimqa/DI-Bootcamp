@@ -1,15 +1,6 @@
-import { applyMiddleware, createStore } from 'redux';
+import { createStore } from 'redux';
 import reducer from '../reducers/transactionReducer';
-import thunk from 'redux-thunk'
 
+const store = createStore(reducer);
 
-const logger = (store) = (next) => (action) => {
-    console.log('prev_state=>', store.getState());
-    console.log('action=>',action);
-    next(action)
-    console.log('curr_state=>',store.getState());
-}
-
-const store = createStore(reducer, applyMiddleware(logger,thunk));
-
-    export default store
+export default store

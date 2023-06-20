@@ -32,10 +32,10 @@ export const UPDATE_INDEX = 'UPDATE_INDEX';
 export const getusers = () => {
     return (dispatch) {
         fetch('https://jsonplaceholder.typicode.com/users')
-        .then(res => res.json())
-        .then(data => {
-            dispstch({type:USERS,payload:data})
-        })
+            .then(res => res.json())
+            .then(data => {
+                dispatch({ type: USERS, payload: data })
+            })
     }
 }
 

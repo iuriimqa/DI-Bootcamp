@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions/CounterAction';
+import { increment, decrement } from '../redux/actions';
 
 const Counter = ({ counter, increment, decrement }) => {
   return (
     <div>
       <h1>Counter: {counter}</h1>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
+      <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
     </div>
   );
 };
