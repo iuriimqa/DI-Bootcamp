@@ -1,4 +1,6 @@
-import { useState, useEffect, useSelector, useDispatch } from 'react'
+import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux'
+import { insert_trx, update_trx } from '../redux/actions'
 
 const TransactionForm = (props) => {
     const [transaction, setTransaction] = useState({
@@ -8,58 +10,74 @@ const TransactionForm = (props) => {
         amount: ''
     })
 
-
     const currentIndex = useSelector(state => state.currentIndex)
     const list = useSelector(state => state.list)
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     const handleInputChange = (e) => {
         setTransaction({ ...transaction, [e.target.name]: e.target.value })
     }
 
+    useEffect(() => {
+        if (currentIndex !== -1) {
+            const trx = list[currentIndex];
+            setTransaction({
+                accountNumber: trx.accountNumber || '',
+                FSC: trx.FSC || '',
+                name: trx.name || '',
+                amount: trx.amount || ''
+            })
+
+        }
+    }, [currentIndex])
+
     const handleSubmit = (e) => {
         e.preventDefault()
+        if (currentIndex === -1) {
+            dispatch(insert_trx(transaction))
+        }
+        else {
+            dispatch(update_trx(transaction))
+        }
+
+        setTransaction({
+            accountNumber: '',
+            FSC: '',
+            name: '',
+            amount: ''
+        })
     }
 
     return (
         <>
-            <form>
-                <input type="text" name='accNumber' placeholder="AccountNumber" onChange={handleInputChange} value={transaction.accountNumber}></input>
-                <br></br>
-                <input type="text" name='FSC' placeholder="FSC" onChange={handleInputChange} value={transaction.FSC}></input>
-                <br></br>
-                <input type="text" name='Holder_name' placeholder="A/C Holder Name" onChange={handleInputChange} value={transaction.name}></input>
-                <br></br>
-                <input type="text" name='Amount' placeholder="Amount" onChange={handleInputChange} value={transaction.amount}></input>
-                <br></br>
-                <input type="submit" value={currentIndex === -1 ? 'Submit' : 'error'}>Submit</input>
-
+            <h2>Transaction Form</h2>
+            <form onSubmit={handleSubmit}>
+                <input name='accountNumber'
+                    placeholder='Account Number'
+                    onChange={handleInputChange}
+                    value={transaction.accountNumber}
+                /><br />
+                <input name='FSC'
+                    placeholder='FSC'
+                    onChange={handleInputChange}
+                    value={transaction.FSC}
+                /><br />
+                <input name='name'
+                    placeholder='Name'
+                    onChange={handleInputChange}
+                    value={transaction.name}
+                /><br />
+                <input name='amount'
+                    placeholder='Amount'
+                    onChange={handleInputChange}
+                    value={transaction.amount}
+                /><br />
+                <input type='submit'
+                    value={currentIndex === -1 ? 'Submit' : 'Update'} />
             </form>
         </>
     )
 }
-
-
-
-// export default class TransactionForm extends Component {
-//   render(){
-//     return(
-//         <>
-//             <form>
-//                 <input type="text" placeholder="AccountNumber"></input>
-//                 <br></br>
-//                 <input type="text" placeholder="FSC"></input>
-//                 <br></br>
-//                 <input type="text" placeholder="A/C Holder Name"></input>
-//                 <br></br>
-//                 <input type="text" placeholder="Amount"></input>
-//                 <br></br>
-//                 <button type="submit">Submit</button>
-
-//             </form>
-//         </>
-//     )
-// }}
 
 export default TransactionForm
